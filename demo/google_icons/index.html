@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courier">
+  <title>Font Ligatures Playground</title>
+  <style>
+    textarea {
+      resize: none;
+    }
+
+    i {
+      white-space: pre-wrap;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: #dde1e7;
+    }
+
+    main.main_body {
+      position: relative;
+      width: max(50vw, 45em);
+      padding: 1em;
+      margin: 1em;
+      background-color: #dde1e7;
+      box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+      border-radius: 1em;
+    }
+
+    main.main_body form {
+      padding: 1em;
+      margin: 2em;
+      box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: 0.5em;
+    }
+
+    main.main_body form textarea {
+      background-color: #dde1e7;
+      border: none;
+      border-radius: 0.3em;
+      width: 85%;
+      height: 5em;
+      padding: 10px 15px;
+      box-shadow: inset -5px -5px 5px rgba(255,255,255,0.45), inset 5px 5px 5px rgba(94,104,121,0.3);
+      outline: none;
+      font-size: x-large;
+    }
+
+    main.main_body form p {
+      background-color: #dde1e7;
+      border: none;
+      border-radius: 0.3em;
+      width: 85%;
+      height: 5em;
+      padding: 10px 15px;
+      box-shadow: inset -5px -5px 5px rgba(255,255,255,0.45), inset 5px 5px 5px rgba(94,104,121,0.3);
+      outline: none;
+      font-family: Courier, monospace;
+      font-size: x-large;
+    }
+
+    main.main_body form h1 {
+      color: #575757;
+      border-radius: 1em;
+      padding: 10px 5px;
+      width: 10em;
+      height: 1em;
+      box-shadow: inset -5px -5px 5px rgba(255,255,255,0.45), inset 5px 5px 5px rgba(94,104,121,0.3);
+      font-family: Courier, monospace;
+    }
+
+    footer {
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+      font-family: Courier, monospace;
+      height: 1em;
+      padding: 0.5em 1.5em;
+      border-radius: 1em;
+      background-color: #dde1e7;
+      box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+    }
+  </style>
+</head>
+<body>
+  <main class="main_body">
+    <form>
+      <h1>Input Text</h1>
+      <textarea placeholder="Input any word you want here" id="input">favorite</textarea>
+    </form>
+    <form>
+      <h1>Output Icons</h1>
+      <i class="material-icons" id="output">favorite</i>
+    </form>
+    <form>
+      <h1>Introduction</h1>
+      <p>This site is to test Google Icon Font Ligatures. Type any words on the Input area and see the result in the output area. To check valid icons, go to <a href="https://fonts.google.com/icons?icon.style=Outlined">official site</a> here! </p>
+    </form>
+  </main>
+  <footer>made by zzzJe</footer>
+  <script>
+    const _input  = document.querySelector('#input');
+    const _output = document.querySelector('#output');
+
+    _input.addEventListener('input', e => {
+      _output.innerText = e.target.value;
+    });
+  </script>
+</body>
+</html>
